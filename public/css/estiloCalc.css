@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(228, 205, 205, 0.589);
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+}
+.calc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#resultado {
+    width: 99.3%;
+    height: 111px;
+    background: linear-gradient(90deg, #96998b, #dde0cb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 6px #00000047;
+}
+#resultado::after {
+    content: "";
+    background: transparent;
+    width: 93.6%;
+    height: 111px;
+    border: 10px solid #cccbd0;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 12px black;
+    position: absolute;
+}
+#resultado::before {
+    content: "";
+    background: transparent;
+    width: 91.6%;
+    height: 104px;
+    border: 4px solid #9e9e9e;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 12px black;
+    position: absolute;
+    z-index: 1;
+}
+.calculadora {
+    width: 450px;
+    height: 550px;
+    background: #eeeeee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px #00000061;
+}
+.calculadora::after {
+    content: "";
+    width: 450px;
+    height: 550px;
+    background: transparent;
+    border: 4px solid #9e9e9e;
+    box-shadow: inset 0px 0px 12px black;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.painelCal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 60vh; */
+    grid-template-columns: repeat(4, 88px);
+    align-content: center;
+    grid-template-rows: minmax(50px, auto) repeat(5, 50px);
+}
+
+.painelCal > button {
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px;
+    margin: 1px;
+    cursor: pointer;
+    background: #ffffff2e;
+    box-shadow: inset 0px 0px 3px #00000070;
+    position: relative;
+    top: 40%;
+}
+.painelCal > button:hover {
+    opacity: 0.3;
+}
+.botaoDel, .botaoZero {
+    grid-column: span 2;
+}
+.botaoPorcentagem::after, 
+.botaoDividir::after,
+.botaoUm::after,
+.botaoDois::after,
+.botaoTres::after,
+.botaoMultiplicar::after,
+.botaoQuatro::after,
+.botaoCinco::after,
+.botaoSeis::after,
+.botaoDividir::after,
+.botaoSete::after,
+.botaoOito::after,
+.botaoNove::after,
+.botaoSubtrair::after,
+.botaoZero::after,
+.botaoPonto::after,
+.botaoResultado::after {
+    content: "";
+    background: transparent;
+    border: 3px solid #00000070;
+    box-shadow: 0px 0px 2px black;
+    position: absolute;
+    top: 0%;
+    width: 79px;
+    height: 42.2px;
+    left: 0;
+}
+.botaoDel::after {
+    content: "";
+    background: transparent;
+    border: 3px solid #00000070;
+    box-shadow: 0px 0px 3px black;
+    position: absolute;
+    top: 0%;
+    width: 166px;
+    height: 42.2px;
+    left: 0;
+}
+.botaoZero::after {
+    content: "";
+    background: transparent;
+    border: 3px solid #00000070;
+    box-shadow: 0px 0px 3px black;
+    position: absolute;
+    top: 0%;
+    width: 166px;
+    height: 42.2px;
+    left: 0;
+}
