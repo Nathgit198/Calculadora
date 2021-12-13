@@ -8,30 +8,32 @@
     <link rel="stylesheet" href="/public/css/estiloCalc.css">
 </head>
 <body>
-    
+
     <section class="calculadora">
         <h1 class="titulo">Calculadora</h1>
         <div class="calc">    
-            <div id="resultado"></div>
+            <div id="resultado">
+                <p id="resultCalc"></p>
+            </div>
             <div class="painelCal">
-                <button class="botaoDel" onclick="clean()">DEL</button>
-                <button class="botaoPorcentagem" onclick="insert('%')">%</button>
-                <button class="botaoDividir" onclick="insert('÷')">÷</button>
-                <button class="botaoUm" onclick="insert('1')">1</button>
-                <button class="botaoDois" onclick="insert('2')">2</button>
-                <button class="botaoTres" onclick="insert('3')">3</button>
-                <button class="botaoMultiplicar" onclick="insert('*')">*</button>
-                <button class="botaoQuatro" onclick="insert('4')">4</button>
-                <button class="botaoCinco" onclick="insert('5')">5</button>
-                <button class="botaoSeis" onclick="insert('6')">6</button>
-                <button class="botaoDividir" onclick="insert('+')">+</button>
-                <button class="botaoSete" onclick="insert('7')">7</button>
-                <button class="botaoOito" onclick="insert('8')">8</button>
-                <button class="botaoNove" onclick="insert('9')">9</button>
-                <button class="botaoSubtrair" onclick="insert('-')">-</button>
-                <button class="botaoZero" onclick="insert('0')">0</button>
-                <button class="botaoPonto" onclick="insert('.')">.</button>
-                <button class="botaoResultado" onclick="resultadoCal()">=</button>
+                <button class="botaoDel" onclick="limpar()">DEL</button>
+                <button class="botaoPorcentagem" onclick="voltar('')"><</button>
+                <button class="botaoDividir" onclick="inserir('/')">/</button>
+                <button class="botaoUm" onclick="inserir('1')">1</button>
+                <button class="botaoDois" onclick="inserir('2')">2</button>
+                <button class="botaoTres" onclick="inserir('3')">3</button>
+                <button class="botaoMultiplicar" onclick="inserir('*')">*</button>
+                <button class="botaoQuatro" onclick="inserir('4')">4</button>
+                <button class="botaoCinco" onclick="inserir('5')">5</button>
+                <button class="botaoSeis" onclick="inserir('6')">6</button>
+                <button class="botaoDividir" onclick="inserir('+')">+</button>
+                <button class="botaoSete" onclick="inserir('7')">7</button>
+                <button class="botaoOito" onclick="inserir('8')">8</button>
+                <button class="botaoNove" onclick="inserir('9')">9</button>
+                <button class="botaoSubtrair" onclick="inserir('-')">-</button>
+                <button class="botaoZero" onclick="inserir('0')">0</button>
+                <button class="botaoPonto" onclick="inserir('.')">.</button>
+                <button class="botaoResultado" onclick="calcular()">=</button>
             </div>
         </div>
     </section>
